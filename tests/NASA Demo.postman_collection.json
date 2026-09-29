@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "9533f561-0f3a-4908-8d35-b46f57de8a00",
+    "name": "NASA Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5228844"
+  },
+  "item": [
+    {
+      "name": "https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=0, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "document"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "navigate"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-user",
+            "value": "?1"
+          },
+          {
+            "key": "upgrade-insecure-requests",
+            "value": "1"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "_ga=GA1.1.1286514153.1789943797; _ga_CSLL4ZEK4L=GS2.1.s1789943796$o1$g1$t1789944000$j60$l0$h0"
+          }
+        ],
+        "url": {
+          "raw": "https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c",
+          "protocol": "https",
+          "host": [
+            "science",
+            "nasa",
+            "gov"
+          ],
+          "path": [
+            "wp-json",
+            "wp",
+            "v2",
+            "apod-basic",
+            ""
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "925e0667-7a97-4898-8472-1f0b1d9bbb6c"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl --url 'https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c' \\\n  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\n  -H 'accept-language: en-US,en;q=0.9' \\\n  -H 'cache-control: no-cache' \\\n  -b '_ga=GA1.1.1286514153.1789943797; _ga_CSLL4ZEK4L=GS2.1.s1789943796$o1$g1$t1789944000$j60$l0$h0' \\\n  -H 'pragma: no-cache' \\\n  -H 'priority: u=0, i' \\\n  -H 'sec-ch-ua: \"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: document' \\\n  -H 'sec-fetch-mode: navigate' \\\n  -H 'sec-fetch-site: none' \\\n  -H 'sec-fetch-user: ?1' \\\n  -H 'upgrade-insecure-requests: 1' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'"
+      },
+      "response": []
+    },
+    {
+      "name": "https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=0, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"macOS\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "document"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "navigate"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-user",
+            "value": "?1"
+          },
+          {
+            "key": "upgrade-insecure-requests",
+            "value": "1"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "_ga=GA1.1.1286514153.1789943797; _ga_CSLL4ZEK4L=GS2.1.s1789943796$o1$g1$t1789944000$j60$l0$h0"
+          }
+        ],
+        "url": {
+          "raw": "https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c",
+          "protocol": "https",
+          "host": [
+            "science",
+            "nasa",
+            "gov"
+          ],
+          "path": [
+            "wp-json",
+            "wp",
+            "v2",
+            "apod-basic",
+            ""
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "925e0667-7a97-4898-8472-1f0b1d9bbb6c"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl --url 'https://science.nasa.gov/wp-json/wp/v2/apod-basic/?api_key=925e0667-7a97-4898-8472-1f0b1d9bbb6c' \\\n  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\n  -H 'accept-language: en-US,en;q=0.9' \\\n  -H 'cache-control: no-cache' \\\n  -b '_ga=GA1.1.1286514153.1789943797; _ga_CSLL4ZEK4L=GS2.1.s1789943796$o1$g1$t1789944000$j60$l0$h0' \\\n  -H 'pragma: no-cache' \\\n  -H 'priority: u=0, i' \\\n  -H 'sec-ch-ua: \"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: document' \\\n  -H 'sec-fetch-mode: navigate' \\\n  -H 'sec-fetch-site: none' \\\n  -H 'sec-fetch-user: ?1' \\\n  -H 'upgrade-insecure-requests: 1' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'"
+      },
+      "response": []
+    },
+    {
+      "name": "APOD-claude",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.nasa.gov/planetary/apod?api_key={{script_key}}&start_date=2026-09-15&end_date=2026-09-20",
+          "protocol": "https",
+          "host": [
+            "api",
+            "nasa",
+            "gov"
+          ],
+          "path": [
+            "planetary",
+            "apod"
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "{{script_key}}"
+            },
+            {
+              "key": "start_date",
+              "value": "2026-09-15"
+            },
+            {
+              "key": "end_date",
+              "value": "2026-09-20"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl \"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2026-09-15&end_date=2026-09-20\""
+      },
+      "response": []
+    }
+  ]
+}
