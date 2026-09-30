@@ -7,26 +7,33 @@
   },
   "item": [
     {
-      "name": "APOD-claude",
+      "name": "NASA- APOD-dates",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://api.nasa.gov/planetary/apod?api_key={{script_key}}&start_date=2026-09-15&end_date=2026-09-20",
-          "protocol": "https",
+          "raw": "{{base_nasa_url}}/apod?api_key={{vault:secret_key}}&start_date=2026-09-15&end_date=2026-09-20",
           "host": [
-            "api",
-            "nasa",
-            "gov"
+            "{{base_nasa_url}}"
           ],
           "path": [
-            "planetary",
             "apod"
           ],
           "query": [
             {
               "key": "api_key",
-              "value": "{{script_key}}"
+              "value": "{{vault:secret_key}}"
             },
             {
               "key": "start_date",
@@ -35,6 +42,41 @@
             {
               "key": "end_date",
               "value": "2026-09-20"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl \"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2026-09-15&end_date=2026-09-20\""
+      },
+      "response": []
+    },
+    {
+      "name": "NASA-APOD- short",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_nasa_url}}/apod?api_key={{vault:secret_key}}",
+          "host": [
+            "{{base_nasa_url}}"
+          ],
+          "path": [
+            "apod"
+          ],
+          "query": [
+            {
+              "key": "api_key",
+              "value": "{{vault:secret_key}}"
             }
           ]
         },
