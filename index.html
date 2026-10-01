@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">2</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">1</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Thursday, 01 October 2026 20:50:54</h5>
+   <h5 class="text-center">Thursday, 01 October 2026 21:42:37</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -509,12 +509,12 @@ body.theme-light code {
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-success">
+      <div class="card-body bg-danger">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">0</h1>
+       <h1 class="display-1">1</h1>
       </div>
      </div>
     </div>
@@ -550,9 +550,9 @@ body.theme-light code {
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 23s<br>
-                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 8.98KB<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 11.5s<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 5.3s<br>
+                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 7.76KB<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 2.6s<br>
                 </div>
             </div>
         </div>
@@ -584,10 +584,10 @@ body.theme-light code {
                         <td class="text-center">2</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-danger">
                         <td>Assertions</td>
                         <td class="text-center">2</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center">1</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -608,9 +608,36 @@ body.theme-light code {
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                <div class="alert alert-success text-uppercase text-center">
-                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
-                </div>
+                    <div class="btn-group float-right" role="group" aria-label="Button Group">
+                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="alert alert-danger text-uppercase text-center">
+                        <h4>Showing 1 Failure</h4>
+                    </div>
+                    <div class="col-sm-12 mb-3">
+                    <div class="card-deck">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger">
+                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2" aria-expanded="false" aria-controls="collapse" id="fails-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2" class="collapsed text-white z-block">
+                                    Iteration 1 - AssertionError - NASA Demo - NASA-APOD- short <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
+                                </a>
+                            </div>
+                            <div id="fails-collapse-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2" class="collapse" aria-labelledby="fails-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2">
+                            <div class="card-body">
+                                <h5 ><strong>Failed Test:</strong> Status code is 200</h5>
+                            <hr>
+                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
+                            <div>
+                                <pre><code >expected response to have status code 200 but got 500</code></pre>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -625,6 +652,7 @@ body.theme-light code {
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
+                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -639,16 +667,16 @@ body.theme-light code {
     </div>
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
-            <div id="folder-b99fdae4-834f-46c6-bf6d-9d176a3130b0" class="card-deck iteration-0">
+            <div id="folder-f2a4b929-cfd7-4e91-ba55-0c22f5c53506" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0" aria-expanded="false" aria-controls="collapse" id="requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506" aria-expanded="false" aria-controls="collapse" id="requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506" class="collapsed text-white z-block">
                     Iteration: 1 - NASA- APOD-dates <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0" class="collapse" aria-labelledby="requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0">
+                    <div id="collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506" class="collapse" aria-labelledby="requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -678,7 +706,7 @@ body.theme-light code {
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 14.2s</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 2.9s</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 7.7KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -718,7 +746,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">4fc1e4bd-2b6c-4dd0-9fe8-99ad255bbe37</td>
+                                                        <td class="text-wrap">3b668a5b-7572-45c4-9174-ea197091abf9</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -752,7 +780,7 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Thu, 01 Oct 2026 20:50:45 GMT</td>
+                                                    <td class="text-wrap">Thu, 01 Oct 2026 21:42:35 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
@@ -776,7 +804,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Age</td>
-                                                    <td class="text-wrap">14</td>
+                                                    <td class="text-wrap">3</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Encoding</td>
@@ -800,7 +828,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Api-Umbrella-Request-Id</td>
-                                                    <td class="text-wrap">d0v4tqijcejip8a82vs0</td>
+                                                    <td class="text-wrap">d0v5lkgmqaa60lec1kb0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cache</td>
@@ -828,7 +856,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Vcap-Request-Id</td>
-                                                    <td class="text-wrap">6ba57831-9045-4a91-4259-27a5450cf807</td>
+                                                    <td class="text-wrap">d63f3ed3-d670-4785-6399-f08295b30b64</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Xss-Protection</td>
@@ -853,11 +881,11 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-c876b6fe-170b-4448-9c0f-1293fc575c5b" class="prettyPrint">[{&quot;date&quot;:&quot;2026-09-15&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-16&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-17&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-18&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-19&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-20&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;}]
+                                                <pre><code id="copyText-16ad24e8-42ba-46aa-8dc0-50202a08cf2b" class="prettyPrint">[{&quot;date&quot;:&quot;2026-09-15&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-16&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-17&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-18&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-19&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;},{&quot;date&quot;:&quot;2026-09-20&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;}]
         </code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-c876b6fe-170b-4448-9c0f-1293fc575c5b">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-16ad24e8-42ba-46aa-8dc0-50202a08cf2b">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -916,16 +944,16 @@ body.theme-light code {
                 </div>
             </div>
             </div>
-            <div id="folder-97476bc6-0555-442a-b27b-711eeb6b978d" class="card-deck iteration-0">
+            <div id="folder-1d1b2884-d5f7-47a5-beca-601512b7e516" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-97476bc6-0555-442a-b27b-711eeb6b978d" aria-expanded="false" aria-controls="collapse" id="requests-97476bc6-0555-442a-b27b-711eeb6b978d" class="collapsed text-white z-block">
+                    <div class="card-header  bg-danger iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-1d1b2884-d5f7-47a5-beca-601512b7e516" aria-expanded="false" aria-controls="collapse" id="requests-1d1b2884-d5f7-47a5-beca-601512b7e516" class="collapsed text-white z-block">
                     Iteration: 1 - NASA-APOD- short <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-97476bc6-0555-442a-b27b-711eeb6b978d" class="collapse" aria-labelledby="requests-97476bc6-0555-442a-b27b-711eeb6b978d">
+                    <div id="collapse-1d1b2884-d5f7-47a5-beca-601512b7e516" class="collapse" aria-labelledby="requests-1d1b2884-d5f7-47a5-beca-601512b7e516">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -954,15 +982,15 @@ body.theme-light code {
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 8.7s</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 1.28KB</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 500 - Internal Server Error</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 2.3s</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 67B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -995,7 +1023,7 @@ body.theme-light code {
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">a6a0156d-c4b3-4376-b635-83adfe184cac</td>
+                                                        <td class="text-wrap">d13447a3-6cfc-45cb-920d-95ff45be10ce</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1029,15 +1057,15 @@ body.theme-light code {
                                             <tbody>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Thu, 01 Oct 2026 20:50:54 GMT</td>
+                                                    <td class="text-wrap">Thu, 01 Oct 2026 21:42:37 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Type</td>
                                                     <td class="text-wrap">application/json</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Transfer-Encoding</td>
-                                                    <td class="text-wrap">chunked</td>
+                                                    <td class="text-nowrap">Content-Length</td>
+                                                    <td class="text-wrap">67</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Connection</td>
@@ -1053,11 +1081,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Age</td>
-                                                    <td class="text-wrap">9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">Content-Encoding</td>
-                                                    <td class="text-wrap">gzip</td>
+                                                    <td class="text-wrap">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Referrer-Policy</td>
@@ -1068,16 +1092,12 @@ body.theme-light code {
                                                     <td class="text-wrap">max-age&#x3D;31536000; includeSubDomains; preload</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-nowrap">Vary</td>
-                                                    <td class="text-wrap">Accept-Encoding</td>
-                                                </tr>
-                                                <tr>
                                                     <td class="text-nowrap">Via</td>
-                                                    <td class="text-wrap">https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])</td>
+                                                    <td class="text-wrap">https/1.1 api-umbrella (ApacheTrafficServer [cMs f ])</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Api-Umbrella-Request-Id</td>
-                                                    <td class="text-wrap">d0v4tu01vmk634a8gu40</td>
+                                                    <td class="text-wrap">d0v5ll6irvlvhs6kbs00</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cache</td>
@@ -1105,7 +1125,7 @@ body.theme-light code {
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Vcap-Request-Id</td>
-                                                    <td class="text-wrap">04a79d4c-7254-4e05-6df8-76b839fd1f03</td>
+                                                    <td class="text-wrap">9f229765-8d4a-4ec2-648a-00e85cc4efca</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Xss-Protection</td>
@@ -1130,11 +1150,11 @@ body.theme-light code {
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-0b9b1213-af8b-4287-8deb-e64206aba9cb" class="prettyPrint">{&quot;date&quot;:&quot;2026-10-01&quot;,&quot;explanation&quot;:&quot;Have you ever seen the full moon rise? This colorful image was photographed last weekend in Sicily, just outside the town of Nicosia, in Italy. It is a composite photograph that shows the Moon rising as the sky turns darker. Lower clouds are reflecting the colors of antitwilight, while ash and gas from Mount Etna are seen higher in the background. The pink band lower in the sky is called the Belt of Venus. During a full moon, the Moon and the Sun are in opposition in the sky: the moon rises as the sun sets. The lunar phase cycle lasts approximately 29.5 days (but the Moon takes approximately 27 days to orbit the Earth). In some cultures of the Northern Hemisphere, the September full moon is called the Harvest Moon. Does your culture have a special name for it? (A full moon by any other name would shine as bright.)APOD&#x27;s email for image submissions has changed. Please see: APOD SubmissionsAPOD&#x27;s main NASA site has moved : From apod.nasa.gov to science.nasa.gov/apodTomorrow&#x27;s picture: sharpless\t\t\t\t\t\t&quot;,&quot;hdurl&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;,&quot;media_type&quot;:&quot;image&quot;,&quot;service_version&quot;:&quot;v1&quot;,&quot;title&quot;:&quot;NASA Science&quot;,&quot;url&quot;:&quot;https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png&quot;}
+                                                <pre><code id="copyText-6f6e87e8-e3bb-4629-8093-9b4e78cf3afb" class="prettyPrint">{&quot;code&quot;:500,&quot;msg&quot;:&quot;Internal Service Error&quot;,&quot;service_version&quot;:&quot;v1&quot;}
         </code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-0b9b1213-af8b-4287-8deb-e64206aba9cb">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-6f6e87e8-e3bb-4629-8093-9b4e78cf3afb">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1151,22 +1171,22 @@ body.theme-light code {
                                             <tbody>
                                                 <tr >
                                                     <td >Status code is 200</td>
-                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
+                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
+                                                    <td class="text-center">1</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row d-none">
+                                    <div class="row ">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1176,6 +1196,10 @@ body.theme-light code {
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td class="w-45 text-nowrap ">Status code is 200</td>
+                                                                <td class="w-55"><pre><code >expected response to have status code 200 but got 500</code></pre></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1281,25 +1305,25 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('collapsed')
-            $('#collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('collapsed')
-            $('#requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('show')
-            $('#collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('show')
-            $('#requests-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('collapsed')
-            $('#collapse-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('collapsed')
-            $('#requests-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('show')
-            $('#collapse-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('show')
+            $('#requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('collapsed')
+            $('#collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('collapsed')
+            $('#requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('show')
+            $('#collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('show')
+            $('#requests-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('collapsed')
+            $('#collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('collapsed')
+            $('#requests-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('show')
+            $('#collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('collapsed')
-            $('#collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('collapsed')
-            $('#requests-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('show')
-            $('#collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('show')
-            $('#requests-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('collapsed')
-            $('#collapse-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('collapsed')
-            $('#requests-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('show')
-            $('#collapse-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('show')
+            $('#requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('collapsed')
+            $('#collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('collapsed')
+            $('#requests-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('show')
+            $('#collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('show')
+            $('#requests-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('collapsed')
+            $('#collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('collapsed')
+            $('#requests-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('show')
+            $('#collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -1315,25 +1339,25 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('collapsed')
-            $('#skipped-collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('collapsed')
-            $('#skipped-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('show')
-            $('#skipped-collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('show')
-            $('#skipped-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('collapsed')
-            $('#skipped-collapse-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('collapsed')
-            $('#skipped-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('show')
-            $('#skipped-collapse-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('show')
+            $('#skipped-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('collapsed')
+            $('#skipped-collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('collapsed')
+            $('#skipped-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('show')
+            $('#skipped-collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('show')
+            $('#skipped-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('collapsed')
+            $('#skipped-collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('collapsed')
+            $('#skipped-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('show')
+            $('#skipped-collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('collapsed')
-            $('#skipped-collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').addClass('collapsed')
-            $('#skipped-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('show')
-            $('#skipped-collapse-b99fdae4-834f-46c6-bf6d-9d176a3130b0').removeClass('show')
-            $('#skipped-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('collapsed')
-            $('#skipped-collapse-97476bc6-0555-442a-b27b-711eeb6b978d').addClass('collapsed')
-            $('#skipped-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('show')
-            $('#skipped-collapse-97476bc6-0555-442a-b27b-711eeb6b978d').removeClass('show')
+            $('#skipped-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('collapsed')
+            $('#skipped-collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').addClass('collapsed')
+            $('#skipped-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('show')
+            $('#skipped-collapse-f2a4b929-cfd7-4e91-ba55-0c22f5c53506').removeClass('show')
+            $('#skipped-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('collapsed')
+            $('#skipped-collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').addClass('collapsed')
+            $('#skipped-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('show')
+            $('#skipped-collapse-1d1b2884-d5f7-47a5-beca-601512b7e516').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -1351,9 +1375,21 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
+            failedItemHeading = $('#fails-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2');
+            failedItemContent = $("#fails-collapse-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2");
+            failedItemHeading.removeClass('collapsed')
+            failedItemContent.removeClass('collapsed')
+            failedItemHeading.addClass('show')
+            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
+            failedItemHeading = $('#fails-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2');
+            failedItemContent = $("#fails-collapse-0927a9b5-b108-4bdd-8f66-7ec5a4042ae2");
+            failedItemHeading.removeClass('show')
+            failedItemContent.removeClass('show')
+            failedItemHeading.addClass('collapsed')
+            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -1478,6 +1514,8 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
+    document.getElementById("showOnlyFailures").style.display = "none";
+    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -1485,6 +1523,8 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
+    document.getElementById("showOnlyFailures").style.display = "block";
+    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -1547,6 +1587,7 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
+    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
