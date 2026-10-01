@@ -24,10 +24,14 @@ jobs:
           npm install -g newman-reporter-htmlextra
 
       - name: Run Postman collection
+        env:
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
         run: |
           mkdir -p newman
           set -o pipefail
           newman run tests/collection.json \
+            -e tests/env.json \
+            --env-var secret_key=$NASA_API_KEY \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export newman/report.html \
             | tee newman/newman-log.txt
