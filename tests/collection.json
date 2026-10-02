@@ -1,13 +1,13 @@
 {
   "info": {
-    "_postman_id": "141f2916-60bb-4527-aab6-fdb0f4c586c4",
-    "name": "NASA Demo",
+    "_postman_id": "32fcf3ea-2c72-4879-8c5f-80611a14643d",
+    "name": "DogImages",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "5228844"
   },
   "item": [
     {
-      "name": "NASA- APOD-dates",
+      "name": "Dog- random",
       "event": [
         {
           "listen": "test",
@@ -23,34 +23,22 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{base_nasa_url}}/apod?api_key={{api_key}}&start_date=2026-09-15&end_date=2026-09-20",
+          "raw": "{{base_url}}/api/breeds/image/random",
           "host": [
-            "{{base_nasa_url}}"
+            "{{base_url}}"
           ],
           "path": [
-            "apod"
-          ],
-          "query": [
-            {
-              "key": "api_key",
-              "value": "{{api_key}}"
-            },
-            {
-              "key": "start_date",
-              "value": "2026-09-15"
-            },
-            {
-              "key": "end_date",
-              "value": "2026-09-20"
-            }
+            "api",
+            "breeds",
+            "image",
+            "random"
           ]
-        },
-        "description": "Generated from cURL: curl \"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2026-09-15&end_date=2026-09-20\""
+        }
       },
       "response": []
     },
     {
-      "name": "NASA-APOD- short",
+      "name": "Dog- random images",
       "event": [
         {
           "listen": "test",
@@ -66,21 +54,18 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{base_nasa_url}}/apod?api_key={{api_key}}",
+          "raw": "{{base_url}}/api/breeds/image/random/3",
           "host": [
-            "{{base_nasa_url}}"
+            "{{base_url}}"
           ],
           "path": [
-            "apod"
-          ],
-          "query": [
-            {
-              "key": "api_key",
-              "value": "{{api_key}}"
-            }
+            "api",
+            "breeds",
+            "image",
+            "random",
+            "3"
           ]
-        },
-        "description": "Generated from cURL: curl \"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2026-09-15&end_date=2026-09-20\""
+        }
       },
       "response": []
     }
